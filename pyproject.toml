@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "esdump"
+version = "0.1.0"
+description = ""
+authors = ["Joseph Lee <cgjosephlee@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "esdump.py"}]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+orjson = "~3"
+elasticsearch = "^7"
+elasticsearch-dsl = "~7.4"
+tqdm = "~4"
+fire = "^0.5.0"
+
+[tool.poetry.group.dev.dependencies]
+elasticsearch = "~7.10"
+
+[tool.poetry.scripts]
+esdump = "esdump:main"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
